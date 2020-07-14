@@ -15,8 +15,8 @@ class InfoPipeline:
             'localhost',
             27017
         )
-        db = self.conn['bbc_news']
-        self.collection = db['bbc_news_tb']
+        db = self.conn['bbcnews']
+        self.collection = db['articles']
 
     def process_item(self, item, spider):
         self.collection.insert(dict(item))
